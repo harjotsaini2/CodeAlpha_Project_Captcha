@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Page Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="captcha.css">
+    <script src="captcha.js"></script>
+</head>
+<body>
+    <form id="surveyForm" action="thankyou.html" method="post">
+        <div class="page" id="page1">
+            <h1>Friendship Test</h1>
+            <label for="name"><b>1. Name</b></label>
+            <input type="text" id="name" name="name">
+            
+            <label for="gender"><b>2.Gender</b></label>
+            <input type="text" id="gender" name="gender">
+        
+            <label for="age"><b>3. Age</b></label>
+            <input type="number" id="age" name="age">
+            
+            <label for="phone_number"><b>4. Phone Number</b></label>
+            <input type="number" id="phone_number" name="phone_number">
+            
+            <button type="button" id="nextButton1">Next</button>
+        </div>
+
+        <div class="page" id="page2">
+                <label><b>5. Does your friend know you</b><br>
+                    <input type="radio" name="knowfriend" value="Yes" id="yesOption">
+                    <label for="yesOption">Yes</label>
+                    <input type="radio" name="knowfriend" value="No" id="noOption">
+                    <label for="noOption">No</label>
+                </label>
+
+            <label><b>6. qualities:</b><br>
+                <input type="checkbox" id="quality1" name="quality1" value="Trustworthy">
+                <label for="quality1">Trustworthy</label><br>
+                <input type="checkbox" id="quality2" name="quality2" value="Loyal">
+                <label for="quality2">Loyal</label><br>
+                <input type="checkbox" id="quality3" name="quality3" value="Honest">
+                <label for="quality3">Honest</label><br>
+                <input type="checkbox" id="quality4" name="quality4" value="Humor">
+                <label for="quality4">Humor</label><br>
+                <input type="checkbox" id="quality5" name="quality5" value="Caring">
+                <label for="quality5">Caring</label><br>
+                <input type="checkbox" id="quality6" name="quality6" value="Respect">
+                <label for="quality6">Respect</label><br>
+            </label>
+
+            <label for="where"><b>7. Where did you meet your friend ?</b></label>
+            <input type="text" id="where" name="where">
+
+            <button type="button" id="prevButton2">Previous</button>
+            <button type="button" id="nextButton2">Next</button>
+        </div>
+
+        <div class="page" id="page3">
+            <label><b>8. What would your friend like(choose one from each line)?</b></label><br>
+                <input type="radio" name="q1" value="fly">To fly &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q1" value="invisible">Be invisible<br><br><br>
+                <input type="radio" name="q2" value="past">Go back to past &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q2" value="future">Go to future<br><br><br>
+                <input type="radio" name="q3" value="food">Favorite food &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q3" value="dessert">Favorite dessert<br><br><br>
+                <input type="radio" name="q4" value="read">Power to read minds &nbsp;&nbsp;
+                <input type="radio" name="q4" value="teleport">Power to teleport<br><br><br>
+                <input type="radio" name="q5" value="beach">Beach &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q5" value="mountains">Mountain<br><br><br>
+
+            <div>
+                <label><b>9. Describe your friend:</b>
+                <textarea id="describe" name="describe"></textarea></label>
+            </div>
+
+            <h1>Human Verification</h1>
+    <label>Enter the CAPTCHA code below:</label>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" readonly id="capt">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="captchaInput">
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button id="prevButton1">Previous</button>
+        <button id="submitButton" style="display: none;">Submit</button>
+    </div>
+    
+        </div>
+
+        <input type="hidden" id="currentPage" name="currentPage" value="1">
+    </form>
+    <script src="jj.js"></script>
+</body>
+</html>
